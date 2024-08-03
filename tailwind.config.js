@@ -43,6 +43,10 @@ module.exports = {
         },
         mentor: "#2400FF",
         mentee: "#F24822",
+        blue: {
+          DEFAULT: "#0366FF",
+          hover: "#024db8",
+        },
       },
     },
   },
