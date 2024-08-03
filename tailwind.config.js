@@ -43,9 +43,13 @@ module.exports = {
         },
         mentor: "#2400FF",
         mentee: "#F24822",
-        blue: {
+        mblue: {
           DEFAULT: "#0366FF",
           hover: "#024db8",
+        },
+        mgray: {
+          DEFAULT: "#B3B3B3",
+          hover: "#999999",
         },
       },
     },

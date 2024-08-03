@@ -1,5 +1,5 @@
 import React from "react";
-// import Button from "../../atoms/Button/Button";
+import Button from "../../atoms/Button/Button";
 import User from "../../..//assets/images/user.png";
 
 function Home() {
@@ -16,11 +16,14 @@ function Home() {
             <h1 className="h1 text-[40px] font-bold mb-4 text-white">
               ~~~ 멘토를 쉽게 찾아보세요
             </h1>
-            {/* <p className="mb-8">fdfdfdfd</p> */}
-            <button className="btn btn-primary justify-center h-[48px] w-[240px]">
+
+            <Button
+              colorClass="btn-primary"
+              icon="ri-arrow-right-line"
+              className="h-12 w-2/5"
+            >
               Get Started
-              <i className="ri-arrow-right-line"></i>
-            </button>
+            </Button>
           </div>
         </div>
       </section>

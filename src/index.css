@@ -27,12 +27,20 @@ h6 {
 }
 
 .btn {
-  @apply transition-all duration-300 text-white rounded-[18px] flex items-center gap-2;
+  @apply transition-all duration-300 text-white rounded-md flex items-center gap-2;
 }
-
+.btn-blue {
+  @apply bg-mblue hover:bg-mblue-hover;
+}
+.btn-gray {
+  @apply bg-mgray hover:bg-mgray-hover;
+}
 .btn-primary {
   @apply bg-primary hover:bg-primary-hover;
 }
 .btn-accent {
   @apply bg-accent hover:bg-accent-hover;
+}
+.input-text {
+  @apply text-[#4F4F4F] font-normal bg-white transform -translate-y-7  scale-100;
 }
