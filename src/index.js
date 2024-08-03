@@ -5,6 +5,7 @@ import App from "./App";
 import NotFound from "./components/pages/NotFound/NotFound";
 import Home from "./components/pages/Home/Home";
 import Login from "./components/pages/Login/Login";
+import Join from "./components/pages/Join/Join";
 import Mentor from "./components/pages/Mentor/Mentor";
 import Mentee from "./components/pages/Mentee/Mentee";
 import "./index.css"; // Tailwind CSS 파일 import
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, path: "/", element: <Home /> },
       { path: "/login", element: <Login /> },
+      { path: "/join", element: <Join /> },
       { path: "/mentor", element: <Mentor /> },
       { path: "/mentee", element: <Mentee /> },
     ],
