@@ -1,12 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import Input from "../../atoms/Input/Input";
 import Button from "../../atoms/Button/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import HomeButton from "../../atoms/HomeButton/HomeButton";
 
 function Login() {
-  const handleClick = () => {
-    alert("Button clicked!");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [password, setPassword] = useState("");
+  // const [accessToken, setAccessToken] = "";
+  const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault(); // 기본 제출 동작 방지
+
+    try {
+      // const response = await axios.post("http://localhost:3000/auth/login", {
+      //   email,
+      //   password,
+      // });
+      // localStorage.setItem("accessToken", response.data.accessToken);
+
+      // setAccessToken(response.data.accessToken);
+
+      navigate("/mypage");
+    } catch (error) {
+      window.alert("로그인에 실패했습니다.");
+      console.error("Login failed:", error);
+      // 로그인 실패 처리
+    }
   };
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white">
@@ -19,11 +40,15 @@ function Login() {
             type="text"
             placeholder="숫자만 사용 (01012345678)"
             label="휴대폰번호"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
           />
           <Input
             type="password"
             placeholder="숫자/문자/기호 사용, 8자 이상"
             label="비밀번호"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <div className="login__join mb-4 text-end w-full">
@@ -35,7 +60,7 @@ function Login() {
           <Button
             colorClass="btn-blue"
             className="h-10 w-full text-sm"
-            onClick={handleClick}
+            onClick={handleLogin}
           >
             로그인
           </Button>
