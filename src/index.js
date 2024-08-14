@@ -8,6 +8,7 @@ import Login from "./components/pages/Login/Login";
 import Join from "./components/pages/Join/Join";
 import Mentor from "./components/pages/Mentor/Mentor";
 import Mentee from "./components/pages/Mentee/Mentee";
+import MyPage from "./components/pages/MyPage/MyPage";
 import "./index.css"; // Tailwind CSS 파일 import
 
 const router = createBrowserRouter([
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       { path: "/join", element: <Join /> },
       { path: "/mentor", element: <Mentor /> },
       { path: "/mentee", element: <Mentee /> },
+      { path: "/mypage", element: <MyPage /> },
     ],
   },
 ]);
